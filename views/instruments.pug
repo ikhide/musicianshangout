@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    .container
+        h1 #{title}
+        ul.list-group
+        each instrument, i in instruments
+            li.list-group-item
+                a(href="/articles/instrument/"+instrument._id) #{instrument.title} 

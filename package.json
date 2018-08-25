@@ -1,0 +1,29 @@
+{
+  "name": "musicians_hangout",
+  "version": "1.0.0",
+  "description": "A blog to connect musicians all over the world",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "author": "ikhide",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "bower": "^1.8.4",
+    "connect-flash": "*",
+    "express": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "global": "^4.3.2",
+    "moment": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*",
+    "pug": "*"
+  }
+}

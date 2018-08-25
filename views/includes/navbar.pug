@@ -1,0 +1,39 @@
+nav.navbar.navbar-inverse
+    .container
+        .navbar-header
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', 
+            data-target='.navbar-collapse')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.logo.navbar-brand(href='/') MH
+        #navbar.collapse.navbar-collapse
+            ul.nav.navbar-nav.navbar-left
+                li
+                    a(href='/') Home
+                li
+                    a(href='/articles') Articles
+                li
+                    a(href='/instruments') Instruments
+            ul.nav.navbar-nav.navbar-right
+
+                if user
+                    li
+                        a(href='/logout') Logout
+                        
+                    li.dropdown
+                        a.dropdown-toggle(href='#', data-toggle='dropdown')
+                            | Manage
+                            span.caret
+                        ul.dropdown-menu
+                            li
+                                a(href='/manage/articles') Articles
+                            li
+                                a(href='/manage/instruments') Instruments
+                    
+                else
+                    li
+                        a(href='/register') Register
+                    li
+                        a(href='/login') Login

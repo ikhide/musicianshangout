@@ -1,0 +1,46 @@
+.create-btn{
+    margin-top: 20px;
+    margin-right: 50px;
+}
+.logo.navbar-brand{
+    font-size:3em;
+    color: white;
+}
+
+#messages li{
+    list-style: none;
+    padding: 10px;
+}
+
+#messages ul{
+    margin:0;
+    padding: 0px;
+}
+
+#messages{
+    margin: 10px;
+}
+
+#messages .success{
+    background: rgb(128, 255, 0);
+    color:#fff;
+}
+
+#messages .error{
+    background: red;
+    color:#fff;
+}
+
+.navbar{
+    margin-bottom: 0px;
+    border-radius: 0;
+}
+
+.showcase{
+    background: url('/img/images.jpg') no-repeat;
+    min-height:400px;
+    width:100%;
+    background-size: cover;
+    color:white;
+
+}

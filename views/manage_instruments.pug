@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    .container
+        .row
+            .col-md-9
+                h1 #{title}
+            .col-md-3
+                a(class='btn btn-default create-btn pull-right', href='/manage/instruments/add') Add Instrument
+    
+        table(class='table table-striped')
+            thead    
+                th Instrument Title
+                th
+                th
+            tbody
+            each instrument, i in instruments
+                tr
+                    td #{instrument.title}
+                    td
+                        a(class="btn btn-tiny btn-default", href=`/manage/instruments/edit/`+instrument._id) Edit
+                        a(class="btn btn-tiny btn-danger instrument-delete pull-right", data-cat-id=instrument._id, data-cat-title=instrument.title) Delete

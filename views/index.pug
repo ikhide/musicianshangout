@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    .jumbotron.showcase
+        .container
+            h1 #{title}
+            p.lead Share your gift with the world
+    .container
+        .row
+            h1
+                |   Welcome #{user.name}
+            p
+                |   Here are the latest articles for you this week
+        .row
+            .col-md-12
+                each article, i in articles
+                    a(href='/articles/show/'+article._id)
+                        h2.post-title #{article.title}
+                    h4.post-subtitle #{article.subtitle}
+                    p.post-meta
+                        | Posted by #{article.author}
+                        | on #{moment(article.created_at).format('MMM Do, YYYY, h:mm:ss a')}
+                        hr    

@@ -1,0 +1,2 @@
+A blog web site for musicians to create instruments, write articles and share ideas.
+technolologies used include: Nodejs, expressjs, bcrypt, express-messages, express-validator, bower components, passport, etc.

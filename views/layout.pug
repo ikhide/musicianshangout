@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head 
+
+        link(rel="stylesheet", href="/bower_components/bootstrap/dist/css/bootstrap.css")
+        link(rel="stylesheet", href="/css/style.css")
+        link(rel="shortcut icon" href="http://images.clipartpanda.com/white-music-note-png-note.jpg")
+        title MH
+    body
+        include ./includes/navbar.pug 
+        br
+        br
+        .container
+            != messages()
+        block content
+        hr
+        footer 
+            .container
+                Copyright &copy; 2019, Musicians' Hangout
+
+
+        script(src='/bower_components/jquery/dist/jquery.js') 
+        script(src='/bower_components/bootstrap/dist/js/bootstrap.js')  
+        script(src='/js/main.js')
+        

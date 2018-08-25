@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    .container
+        .row
+            .col-md-9
+                h1 #{title}
+            .col-md-3
+                a(class='btn btn-default create-btn pull-right', href='/manage/articles/add') Add Article
+
+        table(class='table table-striped')
+            thead    
+                th Article Title
+                th Date Published
+                th Author
+                th
+                th
+            tbody
+            each article, i in articles
+                tr
+                    td #{article.title}
+                    td #{moment(article.created_at).format('MMM Do YYYY, h:mm:a')}
+                    td #{article.author}
+                    td
+                    td
+                        a(class="btn btn-tiny btn-default", href=`/manage/articles/edit/`+article._id) Edit
+                        a(class="btn btn-tiny btn-danger article-delete pull-right", data-article-id=article._id, data-article-title=article.title) Delete
