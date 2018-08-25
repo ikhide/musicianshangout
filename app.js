@@ -6,10 +6,8 @@ const expressValidator = require('express-validator');
 const mongoose = require('mongoose');
 const passport = require('passport');
 
-
-
 //Mongoose connect
-mongoose.connect('mongodb://localhost:27017/mh', { useNewUrlParser: true});
+mongoose.connect('mongodb://musiccianshangout:Flstudio123#@ds131942.mlab.com:31942/musicianshangout', { useNewUrlParser: true});//
 const db = mongoose.connection;
 
 // init app
@@ -78,7 +76,7 @@ app.use('/instruments', instruments);
 app.use('/manage', manage);
 
 // Port
-const port =process.env.port;
+const port = 3000;
 app.listen(port, () => {
   console.log('Server started on port '+port);
 });
