@@ -19,7 +19,7 @@ app.locals.moment = require('moment')
 // Routes variables
 const index = require('./routes/index');
 const articles = require('./routes/articles');
-const instruments = require('./routes/instruments');
+const instruments = require('./routes/Instruments');
 const manage = require('./routes/manage');
 
 // View Setup
