@@ -78,7 +78,7 @@ app.use('/instruments', instruments);
 app.use('/manage', manage);
 
 // Port
-const port =3000;
+const port =process.env.port;
 app.listen(port, () => {
   console.log('Server started on port '+port);
 });
