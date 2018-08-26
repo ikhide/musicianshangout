@@ -7,7 +7,6 @@ router.get('/', ensureAuthenticated,(req,res,next)=>{
             res.render('articles',{
             title: 'Articles',
             articles,articles
-            
             });
         });
 
@@ -19,13 +18,12 @@ router.get('/show/:id', (req,res,next)=>{
         if (err) res.send(err);
 
             res.render('article', {
-            
+
                 title: 'Article',
                 article: article,  
-                        
         });
 
-        });
+    });
 
 });
 
@@ -33,7 +31,6 @@ router.get('/instrument/:instrument_id', (req,res,next)=>{
 
     Article.getInstrumentArticles(req.params.instrument_id,(err, articles)=>{
         Instrument.getInstrumentById(req.params.instrument_id,(err,instrument)=>{
-
         
         res.render('articles',{
             title: instrument.title+ ' Articles',
@@ -66,10 +63,6 @@ router.post('/add', (req,res,next) =>{
                 instruments:instruments
             });
         });
-
-
-
-
         
     } 
     else {
@@ -96,7 +89,6 @@ req.checkBody('title', 'Title is required').notEmpty();
 req.checkBody('author', 'Author is required').notEmpty();
 req.checkBody('body', 'Body is required').notEmpty();
 
-
 let errors = req.validationErrors();
 
 if (errors){
@@ -117,7 +109,6 @@ if (errors){
 
 } 
 else {
-    let article = new Article();
     const query = {_id: req.params.id}
 
     const update = {
@@ -151,8 +142,6 @@ router.delete('/delete/:id', (req,res,next)=>{;
     });
 });
 
-
-
 //store comments
  router.post('/comments/add/:id' , (req,res,next)=>{
 
@@ -171,13 +160,11 @@ router.delete('/delete/:id', (req,res,next)=>{;
                      errors: errors,
                      title: 'Article',
                      article: article,  
-                
             });
-    
         });
-
+        
      } else{
-         let article = new Article()
+
          let query ={_id: req.params.id}
 
          let comment = {
@@ -206,6 +193,4 @@ router.delete('/delete/:id', (req,res,next)=>{;
     }
   }
 
-
  module.exports = router;
-

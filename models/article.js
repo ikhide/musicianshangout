@@ -44,10 +44,7 @@ const articleSchema = mongoose.Schema({
 
 const Article = module.exports= mongoose.model('Article', articleSchema);
 
-
-
 //get Articles
-
 module.exports.getArticles = (callback, limit)=>{
     Article.find(callback).limit(limit).sort([['title', 'ascending']]);
 };
@@ -59,19 +56,16 @@ module.exports.getInstrumentArticles = (instrumentId, callback) =>{
 }
 
 //add article
-
 module.exports.addArticle= (article,callback)=>{
     Article.create(article, callback);
 };
 
 //Get Single article
-
 module.exports.getArticleById = (id,callback)=>{
     Article.findById(id, callback);
 };
 
 // Update article
-
 module.exports.updateArticle = (query, update, options, callback)=>{
     Article.findOneAndUpdate(query,update,options,callback);
 };
@@ -87,10 +81,9 @@ module.exports.addComment = (query,comment, callback)=>{
         $push:{
             comments: comment
         }
-
     },
     callback
-);
+    );
 }
 
 
