@@ -61,7 +61,7 @@ router.post('/edit/:id', (req,res,next)=>{
         });
         
     } else{
-    let instrument = new Instrument();
+   
     const query = {_id:req.params.id}
     const update = {title: req.body.title, description: req.body.description}
 

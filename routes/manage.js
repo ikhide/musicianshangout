@@ -24,7 +24,6 @@ router.get('/instruments', (req,res,next)=>{
         if (err){
             res.send(err);
         }
-
         res.render('manage_instruments', {
             title: 'Instruments',
             instruments: instruments
