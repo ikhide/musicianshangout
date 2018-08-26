@@ -20,7 +20,7 @@ app.locals.moment = require('moment')
 const index = require('./routes/index');
 const articles = require('./routes/articles');
 const manage = require('./routes/manage');
-//const instruments = require('./routes/instruments');
+const instruments =  require('./routes/money');
 
 // View Setup
 app.set('views', path.join(__dirname, 'views'));
@@ -72,7 +72,7 @@ app.use(expressValidator({
 
 
 app.use('/', index);
-//app.use('/instruments', instruments);
+app.use('/instruments', instruments);
 app.use('/articles', articles);
 app.use('/manage', manage);
 
