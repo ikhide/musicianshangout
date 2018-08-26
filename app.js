@@ -72,7 +72,7 @@ app.use(expressValidator({
 
 app.use('/', index);
 app.use('/articles', articles);
-a//pp.use('/instruments', instruments);
+//app.use('/instruments', instruments);
 app.use('/manage', manage);
 
 // Port
