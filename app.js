@@ -18,7 +18,7 @@ app.locals.moment = require('moment')
 
 // Routes variables
 const index = require('./routes/index');
-//const instruments = require('./routes/instruments');
+const instruments = require('./routes/instruments');
 const articles = require('./routes/articles');
 const manage = require('./routes/manage');
 
@@ -72,7 +72,7 @@ app.use(expressValidator({
 
 app.use('/', index);
 app.use('/articles', articles);
-//app.use('/instruments', instruments);
+app.use('/instruments', instruments);
 app.use('/manage', manage);
 
 // Port
